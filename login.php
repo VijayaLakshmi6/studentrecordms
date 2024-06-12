@@ -4,7 +4,7 @@ include('includes/dbconnection.php');
 if(isset($_POST['submit']))
   {
     $uname=$_POST['id'];
-    $Password=$_POST['password'];
+    $Password=$_POST['pass'];
     $query=mysqli_query($con,"select ID,loginid from tbl_login where  loginid='$uname' && password='$Password' ");
     $ret=mysqli_fetch_array($query);
     if($ret>0){
